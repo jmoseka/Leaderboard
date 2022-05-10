@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+<script defer src="static/js/runtime.js"></script><script defer src="static/js/main.js"></script></head>
+<body>
+    <div class="container">
+        <h1>Leaderboard</h1>
+        <div class="score-block">
+            <!--Block 1-->
+            <div class="block-1">
+                <div class="block-title">
+                    <h2>Recent scores</h2>
+                    <div>
+                        <button type="button" id="refresh">Refresh</button>
+                    </div>
+                </div>
+                <div class="content">
+                    <ul class="score-list-container">
+                    </ul>
+                </div>
+            </div>
+            <!--Blocl 2-->
+            <div class="block-2">
+                <div>
+                    <h2>Add your score</h2>
+                    <form>
+                    <input type="text" placeholder="Your name" id="nameInput">
+                    <input type="number" placeholder="Your score" id="scoreInput">
+                    <div class="submit-btn">
+                        <button type="button" id="submit">Submit</button>
+                    </div>
+                    <p class="notice hidden">⛔ Fields cannot be empty</p>
+                    </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
