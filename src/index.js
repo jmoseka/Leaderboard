@@ -15,10 +15,10 @@ submitBtn.addEventListener('click', () => {
   if (nameInput === '' || scoreInput.value === '') {
     notice.classList.remove('hidden');
   } else {
-    const name = nameInput.value;
+    const user = nameInput.value;
     const score = scoreInput.value;
-    const scoreClass = new ScoreCL(name, score);
-    addList(scoreClass);
+    const scoreClass = new ScoreCL(user, score);
+    console.log(addList(scoreClass));
     displayList();
     nameInput.value = '';
     scoreInput.value = '';
