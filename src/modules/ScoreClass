@@ -1,27 +1,4 @@
-export default class ScoreCL {
-    name: any;
-
-    score: any;
-
-    constructor(name, score) {
-      this.name = name;
-      this.score = score;
-    }
-
-      scoresStorage = JSON.parse(window.localStorage.getItem('scoreData') || '[]');
+export default function ScoreCL(name, score) {
+  this.name = name;
+  this.score = score;
 }
-
-// eslint-disable-next-line class-methods-use-this
-export const displayScoreList = (scoreCL) => {
-  scoreCL.scoresStorage = JSON.parse(window.localStorage.getItem('scoreData') || '[]');
-
-  // eslint-disable-next-line no-restricted-syntax
-  for (const scoreList of [...Object.keys(scoreCL.books)]) {
-    const scoreListContainer = document.querySelector('.score-list-container');
-    const element = document.createElement('li');
-    element.innerHTML = `
-              ${scoreCL.score[scoreList].name} : ${scoreCL.scoresStorage[scoreList].score}
-              `;
-    scoreListContainer.appendChild(element);
-  }
-};
