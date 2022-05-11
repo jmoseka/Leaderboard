@@ -9,7 +9,6 @@ const scoreInput = document.querySelector('#scoreInput');
 const notice = document.querySelector('.notice');
 const refresh = document.querySelector('#refresh');
 
-// displayList();
 getList();
 
 // click event for the add button
@@ -22,7 +21,6 @@ submitBtn.addEventListener('click', () => {
     const score = scoreInput.value;
     const scoreClass = new ScoreCL(user, score);
     addList(scoreClass);
-    // displayList();
     nameInput.value = '';
     scoreInput.value = '';
   }
