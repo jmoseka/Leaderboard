@@ -1,14 +1,14 @@
-import { getStorage } from './LocalStorage.js';
+import getList from './GetList.js';
 
 // eslint-disable-next-line class-methods-use-this
 const displayList = () => {
   const scoreListContainer = document.querySelector('.score-list-container');
   scoreListContainer.innerHTML = '';
   // eslint-disable-next-line no-restricted-syntax
-  for (const scoreList of [...Object(getStorage())]) {
+  for (const scoreList of [...Object(getList())]) {
     const element = document.createElement('li');
     element.innerHTML = `
-              ${scoreList.name} : ${scoreList.score}
+              ${scoreList.user} : ${scoreList.score}
               `;
     scoreListContainer.appendChild(element);
   }
