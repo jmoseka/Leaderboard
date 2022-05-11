@@ -43,10 +43,6 @@ body {
   background: #ddd;
 }
 
-#refresh:active, .submit-btn:active {
-  transform: scale(0.9);
-  cursor: pointer;
-}
 form {
   display: flex;
   flex-direction: column;
@@ -62,6 +58,12 @@ input {
 .submit-btn {
   align-self: flex-end;
   margin-top: 10px;
+}
+
+#refresh:active,
+.submit-btn:active {
+  transform: scale(0.9);
+  cursor: pointer;
 }
 
 button {
