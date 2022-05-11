@@ -1,6 +1,6 @@
 const baseUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Zl4d7IVkemOTTVg2fUpp/scores/';
 
-export default async function addList(newData) {
+const addList = async (newData) => {
   const response = await fetch(baseUrl, {
     method: 'POST',
     headers: {
@@ -13,4 +13,5 @@ export default async function addList(newData) {
   });
   const reply = await response.json();
   return reply.result;
-}
+};
+export default addList;
