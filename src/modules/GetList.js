@@ -5,14 +5,14 @@ const getList = async () => {
   const scoreListContainer = document.querySelector('.score-list-container');
   scoreListContainer.innerHTML = '';
   const sorted = reply.result.sort((a, b) => a.score - b.score);
-  // eslint-disable-next-line no-restricted-syntax
-  for (const scoreList of [...Object(sorted)]) {
+
+  sorted.forEach((scoreList) => {
     const element = document.createElement('li');
     element.innerHTML = `
               ${scoreList.user} : ${scoreList.score}
               `;
     scoreListContainer.appendChild(element);
-  }
+  });
   return reply;
 };
 
