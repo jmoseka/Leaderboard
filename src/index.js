@@ -1,28 +1,34 @@
-import addList from './modules/AddList.js';
-import displayList from './modules/DisplayList.js';
-import ScoreCL from './modules/ScoreClass';
 import './style.css';
+import addList from './modules/AddList.js';
+import getList from './modules/GetList.js';
+import ScoreCL from './modules/ScoreClass.js';
 
 const submitBtn = document.querySelector('#submit');
 const nameInput = document.querySelector('#nameInput');
 const scoreInput = document.querySelector('#scoreInput');
 const notice = document.querySelector('.notice');
+const refresh = document.querySelector('#refresh');
 
-displayList();
+getList();
 
 // click event for the add button
 submitBtn.addEventListener('click', () => {
+  refresh.classList.toggle('active');
   if (nameInput === '' || scoreInput.value === '') {
     notice.classList.remove('hidden');
   } else {
-    const name = nameInput.value;
+    const user = nameInput.value;
     const score = scoreInput.value;
-    const scoreClass = new ScoreCL(name, score);
+    const scoreClass = new ScoreCL(user, score);
     addList(scoreClass);
-    displayList();
     nameInput.value = '';
     scoreInput.value = '';
   }
+});
+
+refresh.addEventListener('click', () => {
+  refresh.classList.toggle('active');
+  getList();
 });
 
 // remove error message upon clicking on the form text field

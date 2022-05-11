@@ -14,6 +14,8 @@ HTML
 
 Webpack
 
+### 🔴 [Live Link](https://jmoseka.github.io/Leaderboard/)
+
 ### DEMO
 
 <img src="src/assets/demo-live.gif" alt="gif project">

@@ -1,7 +1,17 @@
-import { getStorage, setStorage } from './LocalStorage.js';
+const baseUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Zl4d7IVkemOTTVg2fUpa/scores/';
 
-export default function addList(add) {
-  const list = getStorage();
-  list.push(add);
-  setStorage(list);
-}
+const addList = async (newData) => {
+  const response = await fetch(baseUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      user: newData.user,
+      score: newData.score,
+    }),
+  });
+  const reply = await response.json();
+  return reply.result;
+};
+export default addList;

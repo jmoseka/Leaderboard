@@ -33,13 +33,13 @@ body {
   padding: 0;
 }
 
-.score-list li {
+.score-list-container li {
   list-style: none;
   padding: 10px;
   background: white;
 }
 
-.score-list li:nth-child(odd) {
+.score-list-container li:nth-child(odd) {
   background: #ddd;
 }
 
@@ -58,6 +58,12 @@ input {
 .submit-btn {
   align-self: flex-end;
   margin-top: 10px;
+}
+
+#refresh:active,
+.submit-btn:active {
+  transform: scale(0.9);
+  cursor: pointer;
 }
 
 button {
