@@ -1,4 +1,5 @@
-async function getList() {
+
+const getList = async () => {
   const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Zl4d7IVkemOTTVg2fUpp/scores/';
   const response = await fetch(url);
   const reply = await response.json();
@@ -14,6 +15,6 @@ async function getList() {
     scoreListContainer.appendChild(element);
   }
   return reply;
-}
+};
 
 export default getList;
