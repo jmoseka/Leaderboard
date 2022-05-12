@@ -1,5 +1,5 @@
 const getList = async () => {
-  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Zl4d7IVkemOTTVg2fUpa/scores/';
+  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Zl4d7IVkemOTTVg2fjm6/scores/';
   const response = await fetch(url);
   const reply = await response.json();
   const scoreListContainer = document.querySelector('.score-list-container');
