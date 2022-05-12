@@ -1,5 +1,5 @@
 const getList = async () => {
-  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Zl4d7IVkemOTTVg2fjm6/scores/';
+  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Zl4d7IVkemOTTVg2fUpa/scores/';
   const response = await fetch(url);
   const reply = await response.json();
   const scoreListContainer = document.querySelector('.score-list-container');
@@ -8,8 +8,13 @@ const getList = async () => {
 
   sorted.forEach((scoreList) => {
     const element = document.createElement('li');
+    element.classList = 'list-item';
+    element.classList = 'space-between';
     element.innerHTML = `
-              ${scoreList.user} : ${scoreList.score}
+              <span>${scoreList.user}</span> 
+              <span class="score-text space-between">${scoreList.score}
+              <i class="fa-solid fa-gem gem"></i>
+              </span>
               `;
     scoreListContainer.appendChild(element);
   });
