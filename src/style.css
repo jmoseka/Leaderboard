@@ -5,42 +5,91 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: 'Poppins', sans-serif;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url('assets/img-bg.jpg');
 }
 
 .container {
-  width: 80%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  align-self: flex-start;
+  color: white;
+  font-size: 34px;
 }
 
 .score-block {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  border-radius: 8px;
+  height: 70vh;
+  width: 80%;
+  max-height: 70vh;
+  background: #1e0c3e;
+  padding: 15px 0;
+  border: 5px solid gold;
 }
 
 .block-1,
 .block-2 {
-  width: 40%;
+  width: 45%;
 }
 
 .block-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #f4755b;
 }
 
-.score-list {
-  border: 2px solid black;
+.form-title {
+  color: #f4755b;
+}
+
+.score-list-container {
   padding: 0;
+  height: 50vh;
+  overflow-y: scroll;
 }
 
 .score-list-container li {
   list-style: none;
-  padding: 10px;
-  background: white;
+  padding: 12px;
+  margin: 6px 6px;
+  background: #4f3e7a8e;
+  border: 1px solid #4f3e7a8e;
+  border-radius: 20px;
+  color: white;
 }
 
-.score-list-container li:nth-child(odd) {
+.score-list-containe li:nth-child(odd) {
   background: #ddd;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score-text {
+  background: #241349;
+  width: 20%;
+  padding: 0 10px;
+  border-radius: 20px;
+}
+
+.gem {
+  color: #eb4b89;
+}
+
+.notice {
+  color: red;
 }
 
 form {
@@ -50,14 +99,26 @@ form {
 }
 
 input {
-  padding: 8px;
+  padding: 12px;
   margin-top: 8px;
-  border: 2px solid black;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
 }
 
 .submit-btn {
   align-self: flex-end;
   margin-top: 10px;
+}
+
+#submit {
+  background-color: greenyellow;
+}
+
+#refresh {
+  background-color: gold;
 }
 
 #refresh:active,
@@ -68,8 +129,10 @@ input {
 
 button {
   padding: 8px;
-  border: 2px solid black;
-  background: white;
+  border: 4px solid white;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .hidden {
