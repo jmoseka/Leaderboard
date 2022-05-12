@@ -37,11 +37,13 @@ Webpack
 <hr>
 
 ### Installations
-```npm install # to install all modules that are listed on package.json file and their dependencies.```
+```npm install #to install all modules that are listed on package.json file and their dependencies.```
 
 (if needed)
 
-```npm update # to update all packages in the node_modules directory and their dependencies ```
+```npm update #to update all packages in the node_modules directory and their dependencies ```
+
+```npm run start #to open the project on browser using webpack liveserver```
 
 <hr>
 
