@@ -1,14 +1,12 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Leaderboard
+
+The leaderboard website displays scores submitted by different players. It also allows you to submit your score
 
 ### 🔴 [Live Link](https://jmoseka.github.io/Leaderboard/)
 
 ### DEMO
 
 <img src="src/assets/demo-live.gif" alt="gif project">
-
-# Leaderboard
-
-The leaderboard website displays scores submitted by different players. It also allows you to submit your score
 
 ## Built With
 
