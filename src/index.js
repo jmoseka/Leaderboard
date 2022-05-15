@@ -13,10 +13,16 @@ getList();
 
 // click event for the add button
 submitBtn.addEventListener('click', () => {
+  const name = nameInput.value;
+  const score = scoreInput.value;
   refresh.classList.toggle('active');
-  if (nameInput === '' || scoreInput.value === '') {
+  if (!name || !score) {
     notice.classList.remove('hidden');
-  } else {
+  } else if (parseInt(score, 10) < 0 || parseInt(score, 10) > 100) {
+    notice.textContent = 'Invalid input. Score points is between 0 - 100';
+    notice.classList.remove('hidden');
+  }
+  else {
     const user = nameInput.value;
     const score = scoreInput.value;
     const scoreClass = new ScoreCL(user, score);
