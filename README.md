@@ -41,9 +41,9 @@ Webpack
 
 (if needed)
 
-```npm update #to update all packages in the node_modules directory and their dependencies ```
+```npm update // to update all packages in the node_modules directory and their dependencies ```
 
-```npm run start #to open the project on browser using webpack liveserver```
+```npm run start // to open the project on browser using webpack liveserver```
 
 <hr>
 
