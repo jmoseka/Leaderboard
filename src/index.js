@@ -21,8 +21,7 @@ submitBtn.addEventListener('click', () => {
   } else if (parseInt(score, 10) < 0 || parseInt(score, 10) > 100) {
     notice.textContent = 'Invalid input. Score points is between 0 - 100';
     notice.classList.remove('hidden');
-  }
-  else {
+  } else {
     const user = nameInput.value;
     const score = scoreInput.value;
     const scoreClass = new ScoreCL(user, score);
